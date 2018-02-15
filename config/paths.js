@@ -37,14 +37,15 @@ function getServedPath(appPackageJson) {
     envPublicUrl || (publicUrl ? url.parse(publicUrl).pathname : '/');
   return ensureSlash(servedUrl, true);
 }
-var dashboardName = 'demo2'
+var dashboardName = 'DashboardBoilerplate'
 var appSrc = 'src/dashboards/'+dashboardName+'/';
 var appBuild = 'build/'+dashboardName+'/';
+
 // config after eject: we're in ./config/
 module.exports = {
   dotenv: resolveApp('.env'),
   appBuild: resolveApp(appBuild),
-  appPublic: resolveApp('public'),
+  appPublic: resolveApp(appSrc+'public'),
   appHtml: resolveApp(appSrc+'index.html'),
   appIndexJs: resolveApp(appSrc+'index.js'),
   appPackageJson: resolveApp('package.json'),
