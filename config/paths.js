@@ -3,6 +3,7 @@
 const path = require('path');
 const fs = require('fs');
 const url = require('url');
+const deployConfig = require('../deploy_config/deploy.config');
 
 // Make sure any symlinks in the project folder are resolved:
 // https://github.com/facebookincubator/create-react-app/issues/637
@@ -37,7 +38,8 @@ function getServedPath(appPackageJson) {
     envPublicUrl || (publicUrl ? url.parse(publicUrl).pathname : '/');
   return ensureSlash(servedUrl, true);
 }
-var dashboardName = 'DashboardBoilerplate'
+var dashboardName = deployConfig.DASHBOARD_NAME;
+
 var appSrc = 'src/dashboards/'+dashboardName+'/';
 var appBuild = 'build/'+dashboardName+'/';
 
