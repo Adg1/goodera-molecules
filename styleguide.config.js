@@ -39,6 +39,10 @@ module.exports = {
             {
               name: 'Drawers',
               components: 'src/components/Curated/Drawers/**/*.js'
+            },
+            {
+              name: 'Charts',
+              components: 'src/components/Curated/Charts/**/*.js'
             }
           ]
         },

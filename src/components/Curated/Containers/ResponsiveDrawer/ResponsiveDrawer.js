@@ -48,6 +48,7 @@ const styles = theme => ({
     },
   },
   content: {
+    overflow: 'auto',
     backgroundColor: theme.palette.background.default,
     width: '100%',
     padding: theme.spacing.unit * 3,
