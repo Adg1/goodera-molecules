@@ -40,6 +40,7 @@ function getServedPath(appPackageJson) {
 }
 var dashboardName = deployConfig.DASHBOARD_NAME;
 
+var src = 'src';
 var appSrc = 'src/dashboards/'+dashboardName+'/';
 var appBuild = 'build/'+dashboardName+'/';
 
@@ -57,4 +58,5 @@ module.exports = {
   appNodeModules: resolveApp('node_modules'),
   publicUrl: getPublicUrl(resolveApp('package.json')),
   servedPath: getServedPath(resolveApp('package.json')),
+  src: resolveApp(src)
 };
