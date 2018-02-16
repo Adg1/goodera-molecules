@@ -50,6 +50,7 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
+    "create": "./scripts/createDashboard.sh",
     "eject": "react-scripts eject",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
