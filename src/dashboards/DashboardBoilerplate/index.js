@@ -11,15 +11,22 @@ import {
   Route, Switch
 } from 'react-router-dom';
 
+import { MuiThemeProvider } from 'material-ui/styles';
+
+import { listItems, classes, urls } from './config/nav.config';
+import { theme } from './config/ui.config';
+
 ReactDOM.render((
   <div>
     <Router>
-      <ResponsiveDrawer>
-        <Switch>
-          <Route exact path='/' component={App} />
-          <Route exact path='/tab1' component={Page1} />
-        </Switch>
-      </ResponsiveDrawer>
+      <MuiThemeProvider theme={theme}>
+        <ResponsiveDrawer listItems={listItems} classes={classes} urls = {urls}>
+          <Switch>
+            <Route exact path='/' component={App} />
+            <Route exact path='/tab1' component={Page1} />
+          </Switch>
+        </ResponsiveDrawer>
+      </MuiThemeProvider>
     </Router>
   </div>
 ), document.getElementById('root'));

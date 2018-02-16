@@ -3,3 +3,14 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.selected {
+  background-color: rgba(0, 0, 0, 0.31)!important;
+}
+
+.drawer-header {
+  min-height: 64px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}

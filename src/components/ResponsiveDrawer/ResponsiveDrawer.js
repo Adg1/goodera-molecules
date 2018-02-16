@@ -71,15 +71,15 @@ class ResponsiveDrawer extends Component {
   };
 
   render() {
-    const { classes, theme } = this.props;
+    const { classes, theme, listItem, urls } = this.props;
 
     const drawer = (
       <div>
-        <div className={classes.drawerHeader} />
+        <div className={classes.drawerHeader}>
+          <img height="80" src={urls.logo}/>
+        </div>
         <Divider />
-        <List>{mailFolderListItems}</List>
-        <Divider />
-        <List>{otherMailFolderListItems}</List>
+        <List>{this.props.listItems}</List>
       </div>
     );
 
@@ -141,6 +141,8 @@ class ResponsiveDrawer extends Component {
 ResponsiveDrawer.propTypes = {
   classes: PropTypes.object.isRequired,
   theme: PropTypes.object.isRequired,
+  listItems: PropTypes.object.isRequired,
+  urls: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles, { withTheme: true })(ResponsiveDrawer);
