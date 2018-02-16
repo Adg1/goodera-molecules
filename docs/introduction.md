@@ -1,0 +1,2 @@
+Goodera molecules is component library for creating customized dashboards.
+It enables **reusable** creation and **sharing** of components across dashboards that will **speedup development** process and reduce redundancy.

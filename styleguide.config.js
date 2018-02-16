@@ -15,5 +15,26 @@ module.exports = {
         }
       ]
     }
-  }
+  },
+  sections: [
+    {
+      name: 'Introduction',
+      content: 'docs/introduction.md'
+    },
+    {
+      name: 'UI Components',
+      sections: [
+        {
+          name: 'Curated',
+          content: 'docs/curated.md',
+          components: 'src/components/curated/**/*.js'
+        },
+        {
+          name: 'Generic',
+          content: 'docs/generic.md',
+          components: 'src/components/generic/**/*.js'
+        }
+      ]
+    }
+  ]
 }
