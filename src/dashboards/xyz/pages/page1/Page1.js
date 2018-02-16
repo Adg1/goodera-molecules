@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './Page1.css';
-import Button from '../../../../components/generic/Buttons/Button/Button';
+import Button from '../../../../components/Button/Button';
 import data from '../../public/world-50m.json';
 
 import {

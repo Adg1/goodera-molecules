@@ -27,12 +27,38 @@ module.exports = {
         {
           name: 'Curated',
           content: 'docs/curated.md',
-          components: 'src/components/curated/**/*.js'
+          sections: [
+            {
+              name: 'Containers',
+              components: 'src/components/curated/Containers/**/*.js'
+            },
+            {
+              name: 'Buttons',
+              components: 'src/components/curated/Buttons/**/*.js'
+            },
+            {
+              name: 'Drawers',
+              components: 'src/components/curated/Drawers/**/*.js'
+            }
+          ]
         },
         {
           name: 'Generic',
           content: 'docs/generic.md',
-          components: 'src/components/generic/**/*.js'
+          sections: [
+            {
+              name: 'Containers',
+              components: 'src/components/generic/Containers/**/*.js'
+            },
+            {
+              name: 'Buttons',
+              components: 'src/components/generic/Buttons/**/*.js'
+            },
+            {
+              name: 'Drawers',
+              components: 'src/components/generic/Drawers/**/*.js'
+            }
+          ]
         }
       ]
     }
