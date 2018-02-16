@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './pages/app/App';
 import Page1 from './pages/page1/Page1';
-import ResponsiveDrawer from '../../components/ResponsiveDrawer/ResponsiveDrawer';
 import registerServiceWorker from './registerServiceWorker';
 
 import {
@@ -15,6 +14,8 @@ import { MuiThemeProvider } from 'material-ui/styles';
 
 import { listItems, classes, urls } from './config/nav.config';
 import { theme } from './config/ui.config';
+
+import ResponsiveDrawer from '../../components/Curated/Containers/ResponsiveDrawer/ResponsiveDrawer';
 
 ReactDOM.render((
   <div>

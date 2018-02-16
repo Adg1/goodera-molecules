@@ -30,15 +30,15 @@ module.exports = {
           sections: [
             {
               name: 'Containers',
-              components: 'src/components/curated/Containers/**/*.js'
+              components: 'src/components/Curated/Containers/**/*.js'
             },
             {
               name: 'Buttons',
-              components: 'src/components/curated/Buttons/**/*.js'
+              components: 'src/components/Curated/Buttons/**/*.js'
             },
             {
               name: 'Drawers',
-              components: 'src/components/curated/Drawers/**/*.js'
+              components: 'src/components/Curated/Drawers/**/*.js'
             }
           ]
         },
@@ -48,15 +48,15 @@ module.exports = {
           sections: [
             {
               name: 'Containers',
-              components: 'src/components/generic/Containers/**/*.js'
+              components: 'src/components/Generic/Containers/**/*.js'
             },
             {
               name: 'Buttons',
-              components: 'src/components/generic/Buttons/**/*.js'
+              components: 'src/components/Generic/Buttons/**/*.js'
             },
             {
               name: 'Drawers',
-              components: 'src/components/generic/Drawers/**/*.js'
+              components: 'src/components/Generic/Drawers/**/*.js'
             }
           ]
         }

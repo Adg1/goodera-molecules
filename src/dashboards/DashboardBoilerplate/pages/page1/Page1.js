@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Page1.css';
-import Button from '../../../../components/generic/Buttons/Button/Button';
+import Button from '../../../../components/Generic/Buttons/Button/Button';
 import data from '../../public/world-50m.json';
 
 import {
