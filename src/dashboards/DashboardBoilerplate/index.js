@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './pages/app/App';
 import Page1 from './pages/page1/Page1';
+import ResponsiveDrawer from '../../components/ResponsiveDrawer/ResponsiveDrawer';
 import registerServiceWorker from './registerServiceWorker';
 
 import {
@@ -13,10 +14,12 @@ import {
 ReactDOM.render((
   <div>
     <Router>
-      <Switch>
-        <Route exact path='/' component={App} />
-        <Route path='/tab1' component={Page1} />
-      </Switch>
+      <ResponsiveDrawer>
+        <Switch>
+          <Route exact path='/' component={App} />
+          <Route exact path='/tab1' component={Page1} />
+        </Switch>
+      </ResponsiveDrawer>
     </Router>
   </div>
 ), document.getElementById('root'));
