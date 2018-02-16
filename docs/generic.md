@@ -1,0 +1,1 @@
+This section contains components that are created in adhoc manner during development process. If you see lot of components with just slight variation consider generalized props and raise a PR for merging it in curated section.
