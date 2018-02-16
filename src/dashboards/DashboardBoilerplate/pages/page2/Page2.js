@@ -37,7 +37,7 @@ class Page2 extends Component {
       year: "2018",
       data: {}
     };
-    getData();
+    this.getData();
   }
 
   handleChange = event => {
