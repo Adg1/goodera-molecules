@@ -21,6 +21,12 @@ export const listItems = (
       </ListItemIcon>
       <ListItemText primary='Employees' />
     </ListItem>
+    <ListItem button component={NavLink} exact to='/tab2' activeClassName={'selected'}>
+      <ListItemIcon>
+        <StarIcon />
+      </ListItemIcon>
+      <ListItemText primary='Milestones' />
+    </ListItem>
   </div>
 );
 

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './pages/app/App';
 import Page1 from './pages/page1/Page1';
+import Page2 from './pages/page2/Page2';
 import registerServiceWorker from './registerServiceWorker';
 
 import {
@@ -25,6 +26,7 @@ ReactDOM.render((
           <Switch>
             <Route exact path='/' component={App} />
             <Route exact path='/tab1' component={Page1} />
+            <Route exact path='/tab2' component={Page2} />
           </Switch>
         </ResponsiveDrawer>
       </MuiThemeProvider>
