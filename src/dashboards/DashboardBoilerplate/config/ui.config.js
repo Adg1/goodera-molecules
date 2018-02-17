@@ -1,11 +1,12 @@
 import { createMuiTheme } from 'material-ui/styles';
 import deepOrange from 'material-ui/colors/deepOrange';
+import deepPurple from 'material-ui/colors/deepPurple';
 import pink from 'material-ui/colors/pink';
 import red from 'material-ui/colors/red';
 
 export const themeObj = {
   palette: {
-    primary: deepOrange,
+    primary: deepPurple,
     secondary: pink,
     error: red,
     // Used by `getContrastText()` to maximize the contrast between the background and

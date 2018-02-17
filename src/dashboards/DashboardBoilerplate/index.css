@@ -4,10 +4,6 @@ body {
   font-family: sans-serif;
 }
 
-.selected {
-  background-color: #ffab91!important;
-}
-
 .drawer-header {
   min-height: 64px;
     display: flex;

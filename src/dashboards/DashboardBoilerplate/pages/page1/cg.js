@@ -18,18 +18,22 @@ import {
 } from "victory";
 
 import BarChart from '../../../../components/Curated/Charts/BarCharts/BarChart';
+import RadarChart from '../../../../components/Curated/Charts/RadarCharts/RadarChart';
+import StackedChart from '../../../../components/Curated/Charts/StackedCharts/StackedChart';
 
 
 const styles = theme => ({
   root: {
     flexGrow: 1,
     marginTop: 30,
-    marginBottom: 30
+    marginBottom: 90
   },
   paper: {
     padding: 16,
     textAlign: 'center',
     color: theme.palette.text.secondary,
+    height: '100%',
+    marginBottom: 50
   },
 });
 
@@ -41,11 +45,13 @@ function CenteredGrid(props) {
       <Grid container spacing={24}>
         <Grid item xs={12} sm={6}>
           <Paper className={classes.paper}>
-            <BarChart/>
+            <RadarChart/>
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Paper className={classes.paper}>xs=6</Paper>
+          <Paper className={classes.paper}>
+            <StackedChart/>
+          </Paper>
         </Grid>
       </Grid>
     </div>
