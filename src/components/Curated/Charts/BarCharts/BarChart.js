@@ -12,8 +12,34 @@ import {
   VictoryGroup,
   VictorySelectionContainer
 } from "victory";
+import PropTypes from 'prop-types';
 
+
+/**
+ * Barchart Component
+ */
 export default class BarChart extends React.Component {
+
+  static propTypes = {
+    /** Barchart data; Array of ```{x:xval, y:yval}``` values */
+    data: PropTypes.array.isRequired,
+    /** Bar styles */
+    barStyle: PropTypes.object,
+    /** Bar Line styles */
+    lineStyle: PropTypes.object,
+    /** Bar Line label */
+    lineLabels: PropTypes.array,
+    /** OnClick Variations */
+    onClickVariations: PropTypes.object,
+  }
+
+  static defaultProps = {
+    barStyle: { data: { width: 15, fill: "green" } },
+    lineStyle: { data: { stroke: "blue", strokeWidth: 5 } },
+    lineLabels: [],
+    onClickVariations: {}
+  }
+
   render() {
     const style = {
       parent: { border: "1px solid #ccc", margin: "2%", maxWidth: "60%" }
@@ -33,7 +59,7 @@ export default class BarChart extends React.Component {
                   {
                     target: "labels",
                     mutation: () => {
-                      return { text: "text" };
+                      return { text: this.props.onClickVariations.barLabel};
                     }
                   },
                   {
@@ -51,7 +77,7 @@ export default class BarChart extends React.Component {
                     mutation: () => {
                       return {
                         style: { fill: "green" },
-                        text: "waddup"
+                        text: this.props.onClickVariations.lineLabel
                       };
                     }
                   }
@@ -61,27 +87,13 @@ export default class BarChart extends React.Component {
           }]}
         >
           <VictoryBar name="bar"
-            style={{ data: { width: 15, fill: "green" } }}
-            data={[
-              { x: 1, y: 1 },
-              { x: 2, y: 2 },
-              { x: 3, y: 3 },
-              { x: 4, y: 2 },
-              { x: 5, y: 1 },
-              { x: 6, y: 2 },
-              { x: 7, y: 3 },
-              { x: 8, y: 2 },
-              { x: 9, y: 1 },
-              { x: 10, y: 2 },
-              { x: 11, y: 3 },
-              { x: 12, y: 2 },
-              { x: 13, y: 1 }
-            ]}
+            style={this.props.barStyle}
+            data={this.props.data}
           />
           <VictoryLine name="line"
             y={() => 0.5}
-            style={{ data: { stroke: "blue", strokeWidth: 5 } }}
-            labels={["LINE"]}
+            style={this.props.lineStyle}
+            labels={this.props.lineLabels}
           />
         </VictoryChart>
       </div>
