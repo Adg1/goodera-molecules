@@ -13,7 +13,7 @@ import {
 
 import { MuiThemeProvider } from 'material-ui/styles';
 
-import { listItems, classes, urls } from './config/nav.config';
+import { classes, urls, navItems } from './config/nav.config';
 import { theme } from './config/ui.config';
 
 import ResponsiveDrawer from '../../components/Curated/Containers/ResponsiveDrawer/ResponsiveDrawer';
@@ -22,7 +22,7 @@ ReactDOM.render((
   <div>
     <Router>
       <MuiThemeProvider theme={theme}>
-        <ResponsiveDrawer listItems={listItems} classes={classes} urls = {urls}>
+        <ResponsiveDrawer classes={classes} urls = {urls} navItems={navItems}>
           <Switch>
             <Route exact path='/' component={App} />
             <Route exact path='/tab1' component={Page1} />

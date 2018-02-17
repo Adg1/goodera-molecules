@@ -7,28 +7,23 @@ import StarIcon from 'material-ui-icons/Star';
 
 import { NavLink } from 'react-router-dom';
 
-export const listItems = (
-  <div>
-    <ListItem button component={NavLink} exact to='/' activeClassName={'selected'}>
-      <ListItemIcon>
-        <InboxIcon />
-      </ListItemIcon>
-      <ListItemText primary="Clients" />
-    </ListItem>
-    <ListItem button component={NavLink} exact to='/tab1' activeClassName={'selected'}>
-      <ListItemIcon>
-        <StarIcon />
-      </ListItemIcon>
-      <ListItemText primary='Employees' />
-    </ListItem>
-    <ListItem button component={NavLink} exact to='/tab2' activeClassName={'selected'}>
-      <ListItemIcon>
-        <StarIcon />
-      </ListItemIcon>
-      <ListItemText primary='Milestones' />
-    </ListItem>
-  </div>
-);
+export const navItems = [
+  {
+    link: '/',
+    name: 'Clients',
+    icon: 'MoveToInbox'
+  },
+  {
+    link: '/tab1',
+    name: 'Employyes',
+    icon: 'Star'
+  },
+  {
+    link: '/tab2',
+    name: 'Milestones',
+    icon: 'Star'
+  }
+]
 
 export const classes = {
   drawerHeader: 'drawer-header'

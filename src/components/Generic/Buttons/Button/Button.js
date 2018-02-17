@@ -34,7 +34,6 @@ Button.defaultProps = {
 	color: '#333',
 	size: 'normal',
 	onClick: event => {
-		// eslint-disable-next-line no-console
 		console.log('You have clicked me!', event.target);
 	},
 };

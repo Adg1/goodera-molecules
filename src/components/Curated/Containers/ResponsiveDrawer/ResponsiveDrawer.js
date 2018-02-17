@@ -11,6 +11,9 @@ import Hidden from 'material-ui/Hidden';
 import Divider from 'material-ui/Divider';
 import MenuIcon from 'material-ui-icons/Menu';
 
+import { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
+import { NavLink } from 'react-router-dom';
+
 const drawerWidth = 240;
 
 const styles = theme => ({
@@ -39,6 +42,9 @@ const styles = theme => ({
     },
   },
   drawerHeader: theme.mixins.toolbar,
+  selected: {
+    backgroundColor: theme.palette.primary.light
+  },
   drawerPaper: {
     width: 250,
     [theme.breakpoints.up('md')]: {
@@ -65,21 +71,50 @@ class ResponsiveDrawer extends Component {
   state = {
     mobileOpen: false,
   };
+  
 
   handleDrawerToggle = () => {
     this.setState({ mobileOpen: !this.state.mobileOpen });
   };
 
   render() {
-    const { classes, theme, listItem, urls } = this.props;
+    const { classes, theme, urls, navItems } = this.props;
 
+    const generateMaterialIcon = ( icon ) => {
+      let resolved = require(`material-ui-icons/${icon}`).default
+  
+      if (!resolved) {
+        throw Error(`Could not find material-ui-icons/${icon}`)
+      }
+      return React.createElement(resolved)
+    }
+    
+    const generateNavItem = (item,id) => {
+      const icon = generateMaterialIcon(item.icon);
+      const itemm =  (
+        <ListItem key={id} button component={NavLink} exact to={item.link} activeClassName={classes.selected}>
+          <ListItemIcon>
+            {icon}
+          </ListItemIcon>
+          <ListItemText primary={item.name} />
+        </ListItem>
+      );
+      return itemm;
+      
+    }
     const drawer = (
       <div>
         <div className={classes.drawerHeader}>
           <img height="80" src={urls.logo}/>
         </div>
         <Divider />
-        <List>{this.props.listItems}</List>
+        <List>
+          {
+            this.props.navItems.map((element, index) => {
+              return generateNavItem(element, index);
+            })
+          }
+        </List>
       </div>
     );
 
@@ -140,8 +175,8 @@ class ResponsiveDrawer extends Component {
 ResponsiveDrawer.propTypes = {
   classes: PropTypes.object.isRequired,
   theme: PropTypes.object.isRequired,
-  listItems: PropTypes.object.isRequired,
   urls: PropTypes.object.isRequired,
+  navItems: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles, { withTheme: true })(ResponsiveDrawer);

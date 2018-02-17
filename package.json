@@ -52,7 +52,7 @@
   "scripts": {
     "create": "./scripts/createDashboard.sh",
     "eject": "react-scripts eject",
-    "styleguide": "styleguidist server",
+    "docs": "styleguidist server",
     "styleguide:build": "styleguidist build",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
