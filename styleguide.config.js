@@ -43,6 +43,14 @@ module.exports = {
             {
               name: 'Charts',
               components: 'src/components/Curated/Charts/**/*.js'
+            },
+            {
+              name: 'Maps',
+              components: 'src/components/Curated/Maps/**/*.js'
+            },
+            {
+              name: 'Icons',
+              components: 'src/components/Curated/Icons/**/*.js'
             }
           ]
         },

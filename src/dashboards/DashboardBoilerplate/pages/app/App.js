@@ -14,7 +14,7 @@ class App extends Component {
     const { classes } = this.props;
     return (
       <div className="App">
-        <header className="App-header" className={classes.header}>
+        <header className={classes.header}>
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Goodera Clients</h1>
         </header>

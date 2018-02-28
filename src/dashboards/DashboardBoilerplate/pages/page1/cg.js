@@ -4,20 +4,7 @@ import { withStyles } from 'material-ui/styles';
 import Paper from 'material-ui/Paper';
 import Grid from 'material-ui/Grid';
 
-import {
-  VictoryAxis,
-  VictoryArea,
-  VictoryBar,
-  VictoryChart,
-  VictoryLine,
-  VictoryPie,
-  VictoryScatter,
-  VictoryStack,
-  VictoryGroup,
-  VictorySelectionContainer
-} from "victory";
 
-import BarChart from '../../../../components/Curated/Charts/BarCharts/BarChart';
 import RadarChart from '../../../../components/Curated/Charts/RadarCharts/RadarChart';
 import StackedChart from '../../../../components/Curated/Charts/StackedCharts/StackedChart';
 

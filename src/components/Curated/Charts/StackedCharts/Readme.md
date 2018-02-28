@@ -1,4 +1,4 @@
-Example of Pie Chart:
+Example of Stacked Chart:
 
 ```jsx
 <StackedChart></StackedChart>

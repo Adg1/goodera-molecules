@@ -22,14 +22,17 @@ ReactDOM.render((
   <div>
     <Router>
       <MuiThemeProvider theme={theme}>
+      <Switch>
         <ResponsiveDrawer classes={classes} urls = {urls} navItems={navItems}>
-          <Switch>
+          
             <Route exact path='/' component={App} />
             <Route exact path='/tab1' component={Page1} />
             <Route exact path='/tab2' component={Page2} />
-          </Switch>
+          
         </ResponsiveDrawer>
+        </Switch>
       </MuiThemeProvider>
+      
     </Router>
   </div>
 ), document.getElementById('root'));

@@ -21,7 +21,7 @@ class Page1 extends Component {
   render() {
     return (
       <div className="App">
-        <Button>hbjjhjbj</Button>
+        <Button>I am a button.</Button>
         <div style={wrapperStyles}>
           <ComposableMap
             projectionConfig={{
